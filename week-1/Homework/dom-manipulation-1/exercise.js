@@ -79,28 +79,30 @@ When a user clicks the ‘Add some text’ button, a new paragraph should be add
 
 const buttonText = document.querySelector('#addTextBtn'); //Declaro variable del botón donde quiero ejecutar el evento
 
+buttonText.addEventListener("click", function(){ //Función del evento
+    let elementoNewP = document.createElement('p'); //Creo el elemento párrafo (p)
+    elementoNewP.innerHTML = "Por fin puedo agregar un párrafo."; //Agrego texto al elemento p.
+    document.getElementById("mainArticles").appendChild(elementoNewP); 
+})
+
+/*Lo estaba haciendo de la siguiente manera, pero me daba error:
+const buttonText = document.querySelector('#addTextBtn'); //Declaro variable del botón donde quiero ejecutar el evento
+
 buttonText.addEventListener("click", function (){ //Función del evento
-    
+
     const elementoNewP = document.createElement("p"); //Creo elemento "p"
     const textoNewP = document.createTextNode("Agrega cualquier comentario o si necesitas contactar con nosotros puedes hacerlo por este medio."); //Creo texto 
     elementoNewP.appendChild(textoNewP); //Agrego texto a p
+    
+    document.getElementById("div.mainArticles").appendChild(elementoNewP);
 
-    const learnMore = document.querySelector("#mainArticles"); //Agrego variable del div que esta en el HTML
+    //const learnMore = document.querySelector("article-lead"); //Agrego variable del div que esta en el HTML
     
-    allContent = learnMore.getElementsByTagName('p')[0]; //Obtener el primer párrafo 
+    //allContent = learnMore.getElementsByTagName('p')[0]; //Obtener el primer párrafo 
     
-    learnMore.insertBefore(elementoNewP,allContent); //Inserto el nuevo párrafo antes del primer párrafo
+    //learnMore.insertBefore(elementoNewP,allContent); //Inserto el nuevo párrafo antes del primer párrafo
 });
-
-    /*
-    const learnMore = document.querySelector("div.mainArticles"); //Agrego variable de la clase Learn More
-
-    const elementoNewP = document.createElement("p"); //Creo elemento "p"
-    const textoNewP = document.createTextNode("Agrega cualquier comentario o si necesitas contactar con nosotros puedes hacerlo por este medio."); //Creo texto 
-    elementoNewP.appendChild(textoNewP); //Agrego texto a p
-
-    document.getElementById("div.mainArticles").insertBefore();
-    */
+*/
 
 /*
 Task 5
@@ -113,7 +115,7 @@ const buttonBigLetter = document.querySelector("#largerLinksBtn");
 
 buttonBigLetter.addEventListener ("click", function (){
     const linksMenu = document.querySelectorAll('href');
-    document.body.style.fontSize = 30;
+    document.body.style.fontSize = 25;
 })
 
 /*

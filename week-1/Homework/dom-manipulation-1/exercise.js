@@ -56,6 +56,15 @@ Write JavaScript below that changes the background colour of the page when the '
 */
 
 
+/* CAMBIA DE COLOR EL BOTÓN CUANDO HAGO CLICK
+let colorButton = document.querySelector("#bgrChangeBtn"); //Declaro variable del botón.
+colorButton.addEventListener("click", changeColor); // Evento al hacer click
+
+function changeColor(){ //Agrego función para cambiar color
+    colorButton.style.backgroundColor = "purple";
+}
+/*
+
 /*
 Task 4
 ======

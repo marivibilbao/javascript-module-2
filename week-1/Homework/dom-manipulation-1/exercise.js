@@ -41,6 +41,12 @@ Task 2
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
 
+let alertButton = document.querySelector("#alertBtn"); //Declaro variable 
+alertButton.addEventListener("click", alertSomething);
+
+function alertSomething(){
+    alert("Thanks for visiting Bikes for Refugees!"); //Mensaje de la alerta cuando se de click
+}
 
 /*
 Task 3

@@ -16,6 +16,23 @@ Write JavaScript below that logs:
 
 */
 
+//Task 1.1: 
+let shouldAllP = document.querySelectorAll("p");
+console.log(shouldAllP.length === 6);
+//Resultado: true
+
+//Task 1.2:
+let firstDiv = document.querySelector("div.site-header");
+console.log(firstDiv);
+
+//Task 1.3:
+let elementJumbo = document.querySelector("#jumbotron-text");
+console.log(elementJumbo);
+
+//Task 1.4:
+let primaryP = document.querySelectorAll("p.primary-content");
+console.log(primaryP.length === 3);
+//Resultado: false
 
 /*
 Task 2

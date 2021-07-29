@@ -77,9 +77,30 @@ Task 4
 When a user clicks the ‘Add some text’ button, a new paragraph should be added inside the section that says “LEARN MORE”
 */
 
-//document.querySelector("#addTextBtn").addEventListener("click", (shouldMessage));
+const buttonText = document.querySelector('#addTextBtn'); //Declaro variable del botón donde quiero ejecutar el evento
 
+buttonText.addEventListener("click", function (){ //Función del evento
+    
+    const elementoNewP = document.createElement("p"); //Creo elemento "p"
+    const textoNewP = document.createTextNode("Agrega cualquier comentario o si necesitas contactar con nosotros puedes hacerlo por este medio."); //Creo texto 
+    elementoNewP.appendChild(textoNewP); //Agrego texto a p
 
+    const learnMore = document.querySelector("#mainArticles"); //Agrego variable del div que esta en el HTML
+    
+    allContent = learnMore.getElementsByTagName('p')[0]; //Obtener el primer párrafo 
+    
+    learnMore.insertBefore(elementoNewP,allContent) //Inserto el nuevo párrafo antes del primer párrafo
+});
+
+    /*
+    const learnMore = document.querySelector("div.mainArticles"); //Agrego variable de la clase Learn More
+
+    const elementoNewP = document.createElement("p"); //Creo elemento "p"
+    const textoNewP = document.createTextNode("Agrega cualquier comentario o si necesitas contactar con nosotros puedes hacerlo por este medio."); //Creo texto 
+    elementoNewP.appendChild(textoNewP); //Agrego texto a p
+
+    document.getElementById("div.mainArticles").insertBefore();
+    */
 
 /*
 Task 5

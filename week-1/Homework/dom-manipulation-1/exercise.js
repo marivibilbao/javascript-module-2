@@ -54,16 +54,12 @@ Task 3
 
 Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
 */
-//Debo revisar ejercicio porque si doy click en cualquier parte cambia de color.
-const bodyColor = document.querySelector("body"); //Declaro variable body
-bodyColor.addEventListener("click", changeColor); //Evento al hacer click
 
-//const clicButton = document.querySelectorAll("#bgrChangeBtn"); //Declaro variable button
-//clicButton.addEventListener("click", changeColor); // Evento al hacer click
+let buttonClic = document.querySelector("#bgrChangeBtn"); //Declaro variable del botón que se debe dar click
 
-function changeColor() { //Función para cambiar color de body
-    bodyColor.style.backgroundColor = "#E0B7F7";
-}
+buttonClic.addEventListener("click", function () { //Agrego función del evento 
+    document.body.style.backgroundColor = "#E0B7F7"; //Defino el color
+});
 
 /* CAMBIA DE COLOR EL BOTÓN CUANDO HAGO CLICK
 let colorButton = document.querySelector("#bgrChangeBtn"); //Declaro variable del botón.
@@ -81,7 +77,8 @@ Task 4
 When a user clicks the ‘Add some text’ button, a new paragraph should be added inside the section that says “LEARN MORE”
 */
 
-let 
+//document.querySelector("#addTextBtn").addEventListener("click", (shouldMessage));
+
 
 
 /*
@@ -109,4 +106,3 @@ Create an array of 5 different colors.
 Using the same function in Task 3, every time the 'Change colour' button is clicked, the background color will be changed with the next color in the array.
 The next color when you are in the last color of the array will be the first color again.
 */
-

@@ -89,7 +89,7 @@ buttonText.addEventListener("click", function (){ //Función del evento
     
     allContent = learnMore.getElementsByTagName('p')[0]; //Obtener el primer párrafo 
     
-    learnMore.insertBefore(elementoNewP,allContent) //Inserto el nuevo párrafo antes del primer párrafo
+    learnMore.insertBefore(elementoNewP,allContent); //Inserto el nuevo párrafo antes del primer párrafo
 });
 
     /*
@@ -109,6 +109,12 @@ Task 5
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
 */
 
+const buttonBigLetter = document.querySelector("#largerLinksBtn");
+
+buttonBigLetter.addEventListener ("click", function (){
+    const linksMenu = document.querySelectorAll('href');
+    document.body.style.fontSize = 30;
+})
 
 /*
 Task 6

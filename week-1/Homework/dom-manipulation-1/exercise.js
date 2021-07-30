@@ -111,12 +111,19 @@ Task 5
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
 */
 
-const buttonBigLetter = document.querySelector("#largerLinksBtn");
+const buttonBigLetter = document.querySelector("#largerLinksBtn"); //Declaro el botón
 
-buttonBigLetter.addEventListener ("click", function (){
-    const linksMenu = document.querySelectorAll('href');
-    document.body.style.fontSize = 25;
+buttonBigLetter.addEventListener ("click", function (){ //Agrego función con evento si dan click
+    let linksMenu = Array.from(document.querySelectorAll(".nav-link")); //
+    
+    linksMenu.forEach ((linkElemnto) => {
+        //console.log(linkElemnto);
+        document.style.fontSize = 25;
+    });
 })
+
+    //linksMenu.forEach(linkElemnto => console.log(linkElemnto));
+    //linksMenu.style.fontSize = 25;
 
 /*
 Task 6
@@ -126,6 +133,18 @@ Using the same function in Task 4,
 When the 'Add' button is clicked, get the text inside the input field and create a new paragraph in the "LEARN MORE" section
 Also clear the text inside the input field
 */
+
+const buttonAdd = document.querySelector('#addArticleBtn'); //Declaro variable del botón donde quiero ejecutar el evento
+let textos = [ ];
+function insertarTextos (texto) {
+    textos.push(texto);
+}
+
+buttonAdd.addEventListener("click", () => { //Función del evento
+    let elementoNewP = document.createElement('p'); //Creo el elemento párrafo (p)
+    elementoNewP.innerHTML = "Por fin puedo agregar un párrafo."; //Agrego texto al elemento p.
+    document.getElementById("mainArticles").appendChild(elementoNewP); 
+})
 
 /*
 Task 7

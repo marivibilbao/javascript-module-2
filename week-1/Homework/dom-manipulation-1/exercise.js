@@ -123,9 +123,6 @@ buttonBigLetter.addEventListener ("click", function (){ //Agrego función con ev
     });
 })
 
-    //linksMenu.forEach(linkElemnto => console.log(linkElemnto));
-    //linksMenu.style.fontSize = 25;
-
 /*
 Task 6
 ======

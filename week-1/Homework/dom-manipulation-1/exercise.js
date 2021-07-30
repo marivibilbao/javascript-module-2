@@ -131,7 +131,8 @@ Using the same function in Task 4,
 When the 'Add' button is clicked, get the text inside the input field and create a new paragraph in the "LEARN MORE" section
 Also clear the text inside the input field
 */
-
+//-------------------------------------------
+//No lo tengo listo todavia
 const buttonAdd = document.querySelector('#addArticleBtn'); //Declaro variable del botón donde quiero ejecutar el evento
 let textos = [ ];
 function insertarTextos (texto) {
@@ -149,6 +150,16 @@ Task 7
 ======
 
 Create an array of 5 different colors.
-Using the same function in Task 3, every time the 'Change colour' button is clicked, the background color will be changed with the next color in the array.
+Using the same function in Task 3, every time the 'Change colour' button is clicked, the background color will be changed 
+with the next color in the array.
 The next color when you are in the last color of the array will be the first color again.
 */
+
+//No esta terminado.
+let diferentColores = ["#FF33D1", "#7BBBE2", "#CEEA8F", "#E7832B", "#D66F8D"]; //Declaro Array
+
+buttonClic.addEventListener("click", function () { //Agrego función del evento 
+    diferentColores.forEach ((colorElement) => { //Acceso a los elementos del array utilizando forEach
+        colorElement.body.style.backgroundColor = diferentColores;
+    });
+});

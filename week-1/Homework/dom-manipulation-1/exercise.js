@@ -114,11 +114,12 @@ When the 'Larger links!' button is clicked, the text of all links on the page sh
 const buttonBigLetter = document.querySelector("#largerLinksBtn"); //Declaro el botón
 
 buttonBigLetter.addEventListener ("click", function (){ //Agrego función con evento si dan click
-    let linksMenu = Array.from(document.querySelectorAll(".nav-link")); //
+    let linksMenu = Array.from(document.querySelectorAll('a[href*="#"]')); // Convertir una NodeList en una matriz, puede usar Array.from
+    /*Seleccionar enlaces con jQuery es muy sencillo mediante los selectores de atributo. 
+    Por ejemplo, podemos seleccionar todos los enlaces que contengan # en la URL: var links = $( 'a[href*="#"]' );*/
     
-    linksMenu.forEach ((linkElemnto) => {
-        //console.log(linkElemnto);
-        document.style.fontSize = 25;
+    linksMenu.forEach ((linkElement) => { //Acceso a los elementos del array utilizando forEach
+        linkElement.style.fontSize = 25;
     });
 })
 

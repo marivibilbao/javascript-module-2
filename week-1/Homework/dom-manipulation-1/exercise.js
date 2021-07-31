@@ -18,7 +18,7 @@ Write JavaScript below that logs:
 
 //Task 1.1: 
 let shouldAllP = document.querySelectorAll("p");
-console.log(shouldAllP.length === 6);
+console.log("La longitud del párrago es igual a 6", shouldAllP.length === 6);
 //Resultado: true
 
 //Task 1.2:
@@ -30,7 +30,7 @@ let elementJumbo = document.querySelector("#jumbotron-text");
 console.log(elementJumbo);
 
 //Task 1.4:
-let primaryP = document.querySelectorAll("p.primary-content");
+let primaryP = document.querySelectorAll(".primary-content p"); //primary-content es el elemento padre y p el hijo
 console.log(primaryP.length === 3);
 //Resultado: false
 

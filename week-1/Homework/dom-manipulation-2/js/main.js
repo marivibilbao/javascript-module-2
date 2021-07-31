@@ -44,7 +44,11 @@ When clicking green it should change:
     - Volunteer button background color to #8c9c08
 */
 
-let buttonGreen = document.querySelector("#greenBtn");
-buttonGreen.addEventListener("click", function () {
-    document.jumbotron.style.backgroundColor = "#87ca8a";
+let buttonGreen = document.querySelector("#greenBtn"); //Declaro botón verde
+
+buttonGreen.addEventListener("click", (event) => { //Agrego función del evento click
+    event.preventDefault();
+    jumboColor.style.backgroundColor = '#87ca8a'; //Cambio fondo de jumbotron
+    buttonDonate.style.backgroundColor = "black";
+    buttonVolunteer.style.backgroundColor = "#8c9c08";
 });

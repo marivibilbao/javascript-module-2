@@ -55,11 +55,32 @@ Task 3
 Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
 */
 
+/*
 let buttonClic = document.querySelector("#bgrChangeBtn"); //Declaro variable del botón que se debe dar click
 
 buttonClic.addEventListener("click", function () { //Agrego función del evento 
     document.body.style.backgroundColor = "#E0B7F7"; //Defino el color
 });
+*/
+
+//Forma mejor de hacer Task 3 y también está la Task 7:
+let buttonChangeColor = document.getElementById('bgrChangeBtn');
+ buttonChangeColor.addEventListener("click", event => { //Función al hacer click
+     changeColor(event, '#E0B7F7');
+ });
+
+function changeColor(event,color) {
+    let diferentColores = ["#FF33D1", "#7BBBE2", "#CEEA8F", "#E7832B", "#D66F8D"]; //Task 7 Array de cinco colores diferentes
+    event.preventDefault();
+    const body = document.querySelector('body');
+    const bodycolor = body.style.backgroundColor;
+    let colorIndex = diferentColores.indexOf(bodycolor); //Task 7
+    if (colorIndex === -1 || (colorIndex === diferentColores.length - 1)){
+        body.style.backgroundColor = diferentColores[0];
+    }else{
+        body.style.backgroundColor = diferentColores[colorIndex + 1]
+    }
+}
 
 /* CAMBIA DE COLOR EL BOTÓN CUANDO HAGO CLICK
 let colorButton = document.querySelector("#bgrChangeBtn"); //Declaro variable del botón.
@@ -131,19 +152,26 @@ Using the same function in Task 4,
 When the 'Add' button is clicked, get the text inside the input field and create a new paragraph in the "LEARN MORE" section
 Also clear the text inside the input field
 */
-//-------------------------------------------
-//No lo tengo listo todavia
-const buttonAdd = document.querySelector('#addArticleBtn'); //Declaro variable del botón donde quiero ejecutar el evento
-let textos = [ ];
-function insertarTextos (texto) {
-    textos.push(texto);
+
+let addButton = document.querySelector('#addArticleBtn').addEventListener('click', (e) => { //Declaro variable más evento
+    const inputText = document.querySelector('.addArticle').value;
+    let texto = inputText.trim();
+    addParagraph(texto);
+})
+
+function addParagraph(text){ //Agrego función para añadir párrafo
+    const pContainer = document.querySelector("#mainArticles"); //Declaro variable "#mainArticles"
+    const article = document.createElement("article"); //Declaro variable de "article"
+    article.classList.add("article");
+    const elementP = document.createElement('p'); //Declaro variable de elemento "p"
+    elementP.classList.add("article-lead");
+    elementP.textContent = text;
+    article.appendChild(elementP);
+    pContainer.appendChild(article);
+    document.querySelector('.addArticle').value = '';
 }
 
-buttonAdd.addEventListener("click", () => { //Función del evento
-    let elementoNewP = document.createElement('p'); //Creo el elemento párrafo (p)
-    elementoNewP.innerHTML = "Por fin puedo agregar un párrafo."; //Agrego texto al elemento p.
-    document.getElementById("mainArticles").appendChild(elementoNewP); 
-})
+//article.className = "miClase"
 
 /*
 Task 7
@@ -155,11 +183,4 @@ with the next color in the array.
 The next color when you are in the last color of the array will be the first color again.
 */
 
-//No esta terminado.
-let diferentColores = ["#FF33D1", "#7BBBE2", "#CEEA8F", "#E7832B", "#D66F8D"]; //Declaro Array
-
-buttonClic.addEventListener("click", function () { //Agrego función del evento 
-    diferentColores.forEach ((colorElement) => { //Acceso a los elementos del array utilizando forEach
-        colorElement.body.style.backgroundColor = diferentColores;
-    });
-});
+//Task 7 se encuentra en Task 3

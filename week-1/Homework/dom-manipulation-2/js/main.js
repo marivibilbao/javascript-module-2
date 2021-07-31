@@ -6,14 +6,16 @@
 */
 
 const buttonBlue = document.querySelector("#blueBtn"); //Declaro variable del botón blue
-const buttonDonate = document.querySelector("#btn-primary"); //Declaro botón "Donate a bike today"
-const buttonVolunteer = document.querySelector("#btn btn-secondary btn-lrg"); //Declaro botón "Volunteer"
+const buttonDonate = document.querySelector(".btn-lrg"); //Declaro botón "Donate a bike today"
+const buttonVolunteer = document.querySelector(".btn-secondary"); //Declaro botón "Volunteer"
 const jumboColor = document.querySelector(".jumbotron"); //Declaro jumboColor
 
-buttonBlue.addEventListener('click', (e) => { //Agrego función del evento click
-    e.preventDefault();
+buttonBlue.addEventListener('click', (event) => { //Agrego función del evento click
+    event.preventDefault();
     jumboColor.style.backgroundColor = '#588fbd'; //Cambio fondo de jumbotron
-    buttonDonate.style.backgroundColor = "#ffa500";
+    buttonDonate.style.backgroundColor = '#FFA500';
+    buttonVolunteer.style.backgroundColor = "black";
+    buttonVolunteer.style.color = "white";
 });
 
 /*

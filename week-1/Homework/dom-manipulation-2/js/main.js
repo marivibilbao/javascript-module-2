@@ -13,9 +13,9 @@ const jumboColor = document.querySelector(".jumbotron"); //Declaro jumboColor
 buttonBlue.addEventListener('click', (event) => { //Agrego función del evento click
     event.preventDefault();
     jumboColor.style.backgroundColor = '#588fbd'; //Cambio fondo de jumbotron
-    buttonDonate.style.backgroundColor = '#FFA500';
+    buttonDonate.style.backgroundColor = '#FFA500'; 
     buttonVolunteer.style.backgroundColor = "black";
-    buttonVolunteer.style.color = "white";
+    buttonVolunteer.style.color = "white"; //Cambia color de la letra botoón Volunteer
 });
 
 /*
@@ -26,9 +26,14 @@ When clicking orange it should change:
     - Volunteer button background color to #31b0d5 and text color to white
 */
 
-let buttonOrange = document.querySelector("#orangeBtn");
-buttonOrange.addEventListener("click", function () { //Agrego función del evento click
-    document.body.style.backgroundColor = "#f0ad4e"; //Al dar click el fondo cambia de color
+const buttonOrange = document.querySelector("#orangeBtn"); //Variable botón Orange
+
+buttonOrange.addEventListener("click", (event) => { //Agrego función del evento click
+    event.preventDefault();
+    jumboColor.style.backgroundColor = '#f0ad4e'; //Cambio fondo de jumbotron
+    buttonDonate.style.backgroundColor = "#5751fd";
+    buttonVolunteer.style.backgroundColor = "#31b0d5";
+    buttonVolunteer.style.color = "white";
 });
 
 /*

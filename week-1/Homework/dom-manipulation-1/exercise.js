@@ -66,11 +66,13 @@ buttonClic.addEventListener("click", function () { //Agrego función del evento
 //Forma mejor de hacer Task 3 y también está la Task 7:
 let buttonChangeColor = document.getElementById('bgrChangeBtn');
  buttonChangeColor.addEventListener("click", event => { //Función al hacer click
-     changeColor(event, '#E0B7F7');
+     changeColor(event, 'purple');
  });
 
+//let diferentColores = ["#FF33D1", "#7BBBE2", "#CEEA8F", "#E7832B", "#D66F8D"]
+
 function changeColor(event,color) {
-    let diferentColores = ["#FF33D1", "#7BBBE2", "#CEEA8F", "#E7832B", "#D66F8D"]; //Task 7 Array de cinco colores diferentes
+    let diferentColores = ["purple", "yellow", "blue", "green", "gray"]; //Task 7 Array de cinco colores diferentes
     event.preventDefault();
     const body = document.querySelector('body');
     const bodycolor = body.style.backgroundColor;

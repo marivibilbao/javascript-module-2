@@ -5,14 +5,14 @@
 */
 
 var phone = {
-    brand:'iPhone,
-    model 'iPhone X'
+    brand:'iPhone', //Cierre de comilla
+    model: 'iPhone X', //Dos puntos y la coma al final
     launchYear: 2017,
-    is Unlocked: true
-;
+    isUnlocked: true, //Quitar espacio en la declaración del nombre de la propiedad y la coma al final
+}; //Cierre de llave
 
-var phoneBrand = phone.bbrand;
-var phoneLaunchYear = phone[launchYear];
+var phoneBrand = phone.brand; //Una letra "b" está demás.
+var phoneLaunchYear = phone['launchYear']; //Comillas en el nombre de la propiedad
 
 // DO NOT MODIFY BELOW THIS LINE
 

@@ -9,7 +9,7 @@ var kitten = {
     age: 23, //Faltaban los dos punto, la coma y los números no van en comillas.
 };
 
-var laptop = { //Abrir corchete
+var laptop = { //Abrir llave
     brand: "Lenovo", //La coma al final
     ram: "5GB", //Los dos punto y la coma al final
 }; //Punto y coma al final.
@@ -19,4 +19,4 @@ var phone = {
     hasStylus: true,
     megapixels: 12, //Los dos puntos y la coma
     batteryLife: "24 hours", //Nombre de la propiedad no va en comillas y la coma al final
-}; //Cerrar corchete y punto y coma.
+}; //Cerrar llave y punto y coma.

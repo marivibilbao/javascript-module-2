@@ -20,7 +20,6 @@ var myLaptop = {
   discoDuro: 520,
 };
 
-
 /* Información que ya se encontraba en el ejercicio
 let laptop = {
     brand: "Lenovo",

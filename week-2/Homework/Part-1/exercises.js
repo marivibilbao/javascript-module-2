@@ -33,8 +33,28 @@ function exerciseOne(arrayOfPeople) { //Ya estaba escrito en el ejercicio.
  * All of your HTML should go inside the Div tag with the id "content".
  *
  */
+
 function exerciseTwo(shopping) { //Ya estaba escrito en el ejercicio.
   //Write your code in here
+  let unorderedList = document.createElement('ul'); //Se crea elemento para lista desordenada
+  content.appendChild(unorderedList); //Lista desordenada está dentro del div content
+
+  let item1List = document.createElement('li'); //Se crea 1er elemento de la lista
+  let item1Text = document.createTextNode("Libro: Psicopedagogia de la lengua escrita. Vol I"); //Texto que va en el 1er elemento
+  item1List.appendChild(item1Text); //El texto va dentro del elemento.
+
+  let item2List = document.createElement('li'); //Se crea 2do elemento de la lista
+  let item2Text = document.createTextNode("Cuaderno.");
+  item2List.appendChild(item2Text);
+
+  let item3List = document.createElement('li');
+  let item3Text = document.createTextNode("Bolígrafos, lápices y colores.");
+  item3List.appendChild(item3Text);
+
+  //Elementos que van dentro de la lista desordenada.
+  unorderedList.appendChild(item1List); 
+  unorderedList.appendChild(item2List);
+  unorderedList.appendChild(item3List);
 }
 
 /**

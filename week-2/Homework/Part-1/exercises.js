@@ -13,8 +13,17 @@
  *      .....
  * </div>
  */
-function exerciseOne(arrayOfPeople) {
-  let content = document.querySelector("#content");
+
+function exerciseOne(arrayOfPeople) { //Ya estaba escrito en el ejercicio.
+  let content = document.querySelector("#content"); //Ya estaba escrito en el ejercicio.
+
+  let titleH1 = document.createElement("h1"); //Creamos elemento h1
+  titleH1.textContent = "Nancy González"; //Agrego texto que va dentro de h1
+  content.appendChild(titleH1);
+
+  let titleH2 = document.createElement("h2"); //Creamos elemento h2
+  titleH2.textContent = "Psicopedagogía"; //Agrego texto que va dentro de h2
+  content.appendChild(titleH2);
 }
 
 /**
@@ -24,7 +33,7 @@ function exerciseOne(arrayOfPeople) {
  * All of your HTML should go inside the Div tag with the id "content".
  *
  */
-function exerciseTwo(shopping) {
+function exerciseTwo(shopping) { //Ya estaba escrito en el ejercicio.
   //Write your code in here
 }
 
@@ -57,7 +66,7 @@ function exerciseTwo(shopping) {
 
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
-function exerciseThree(books) {
+function exerciseThree(books) { //Ya estaba escrito en el ejercicio.
   //Write your code in here
 }
 

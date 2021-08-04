@@ -12,7 +12,7 @@ var kitten = {
 var laptop = { //Abrir corchete
     brand: "Lenovo", //La coma al final
     ram: "5GB", //Los dos punto y la coma al final
-}; //Punto y coma al final
+}; //Punto y coma al final.
 
 var phone = {
     operatingSystem: "iOS", //La declaración de la propiedad no debe tener espacio y faltaban los dos puntos.

@@ -14,11 +14,11 @@ var myLaptop = {
   colorOfLaptop: "Gray",
   hasWebcam: true,
   modelo: "Ideapad 5",
-  memoriaRam: "8 GB",
+  memoriaRam: "8GB",
   bitsSistemaOperativo: 64,
   bluetooth: true,
   discoDuro: 520,
-}
+};
 
 
 /* Información que ya se encontraba en el ejercicio

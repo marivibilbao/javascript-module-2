@@ -13,7 +13,11 @@
  *      .....
  * </div>
  */
+ function exerciseOne(arrayOfPeople) { //Ya estaba escrito en el ejercicio.
+  let content = document.querySelector("#content"); //Ya estaba escrito en el ejercicio.
+}
 
+/* No es lo que solicitan en el ejercicio, ya que las entrandas están más abajo.
 function exerciseOne(arrayOfPeople) { //Ya estaba escrito en el ejercicio.
   let content = document.querySelector("#content"); //Ya estaba escrito en el ejercicio.
 
@@ -25,6 +29,9 @@ function exerciseOne(arrayOfPeople) { //Ya estaba escrito en el ejercicio.
   titleH2.textContent = "Psicopedagogía"; //Agrego texto que va dentro de h2
   content.appendChild(titleH2);
 }
+*/
+
+//--------------------------------------------------------------------------------------------------------------
 
 /**
  *
@@ -34,6 +41,11 @@ function exerciseOne(arrayOfPeople) { //Ya estaba escrito en el ejercicio.
  *
  */
 
+ function exerciseTwo(shopping) { //Ya estaba escrito en el ejercicio.
+  //Write your code in here
+}
+
+/* No es lo que solicitan en el ejercicio, ya que las entrandas están más abajo.
 function exerciseTwo(shopping) { //Ya estaba escrito en el ejercicio.
   //Write your code in here
   let unorderedList = document.createElement('ul'); //Se crea elemento para lista desordenada
@@ -61,6 +73,9 @@ function exerciseTwo(shopping) { //Ya estaba escrito en el ejercicio.
   unorderedList.appendChild(item3List);
   unorderedList.appendChild(item4List);
 }
+ */
+
+//--------------------------------------------------------------------------------------------------------------
 
 /**
     I'd like to display my three favorite books inside a nice webpage!
@@ -91,8 +106,11 @@ function exerciseTwo(shopping) { //Ya estaba escrito en el ejercicio.
 
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
+
 function exerciseThree(books) { //Ya estaba escrito en el ejercicio.
   //Write your code in here
+  let pBook1 = document.createElement('p');
+  let textBook1 = document.createTextNode();
 }
 
 //

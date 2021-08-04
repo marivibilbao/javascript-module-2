@@ -6,7 +6,7 @@ Try to think of as many properties as you can!
 
 */
 
-let myLaptop = {
+var myLaptop = {
   brand: "Lenovo",
   screenSize: 14,
   isTouchScreen: true,

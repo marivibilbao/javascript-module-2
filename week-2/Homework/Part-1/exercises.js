@@ -51,10 +51,15 @@ function exerciseTwo(shopping) { //Ya estaba escrito en el ejercicio.
   let item3Text = document.createTextNode("Bolígrafos, lápices y colores.");
   item3List.appendChild(item3Text);
 
+  let item4List = document.createElement('li');
+  let item4Text = document.createTextNode("Silla de oficina ergonomica.");
+  item4List.appendChild(item4Text);
+
   //Elementos que van dentro de la lista desordenada.
   unorderedList.appendChild(item1List); 
   unorderedList.appendChild(item2List);
   unorderedList.appendChild(item3List);
+  unorderedList.appendChild(item4List);
 }
 
 /**

@@ -8,5 +8,9 @@ var kitten = {
     furColour: "brown"
 };
 
+console.log(kitten.ageMonths);
+console.log(kitten.isFemale);
+console.log(kitten.furColour);
+
 // YOUR CODE HERE
 

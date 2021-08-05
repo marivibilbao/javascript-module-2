@@ -9,6 +9,10 @@ var dog = {
 
 // WRITE CODE HERE
 
+var dog = { //Toma el valor de la última variable declarada.
+    name: "Rex",
+    wantsToPlay: true,
+};
 
 //DO NOT MODIFY BELOW
 console.log(dog.name);

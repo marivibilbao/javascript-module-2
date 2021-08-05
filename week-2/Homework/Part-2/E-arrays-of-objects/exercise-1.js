@@ -25,9 +25,12 @@ WRITE YOUR CODE BELOW
 */
 
 
-let persons = // Complete here
+let persons = [person1, person2, person3]; // Complete here -- Definir array de las tres personas
 
-let personNames = // Complete here
+let personNames = function (person) { // Complete here ----------------******************DEBO REVISAR
+    return person.name;
+} 
+persons.map(personNames);
 
 let personsYoungerThan28YearsOld = // Complete here
 

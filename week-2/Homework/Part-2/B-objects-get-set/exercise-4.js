@@ -14,6 +14,11 @@ var dog = { //Toma el valor de la última variable declarada.
     wantsToPlay: true,
 };
 
+/* Otra forma de hacer el ejercicio. Preguntar en clase!
+dog.name = "Rex",
+dog.wantsToPlay: true,
+*/
+
 //DO NOT MODIFY BELOW
 console.log(dog.name);
 console.log(dog.wantsToPlay);

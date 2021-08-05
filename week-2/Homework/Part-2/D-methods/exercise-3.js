@@ -8,12 +8,12 @@ let person = {
     name: "Alice",
     age: 25,
     currentAddress: "Glasgow",
-    changeAddress: (newAddress) {
+    changeAddress: function (newAddress) { //Agrego palabra función ***---- DEBO REVISAR
         currentAddress = newAddress;
     },
-    celebrateBirthday: function {
-        that.age = that.age + 1;
-    }
+    celebrateBirthday: function() { //Agrego paréntesis después de la palabra función
+        this.age = this.age + 1; //Se cambia el that por this para hacer referencia al objeto actual del método.
+    }, //Agrego coma aunque no afecta el resultado
 };
 
 

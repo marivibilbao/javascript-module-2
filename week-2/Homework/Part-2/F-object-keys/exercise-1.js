@@ -19,11 +19,13 @@ let highScores = {
 };
 
 // ONLY EDIT BELOW HERE
+//Object.keys(). Este método entra en nuestro objeto y devuelve los nombres de las propiedades del objeto como una matriz.
+//Object.values() devuelve un array con los valores correspondientes a las propiedades enumerables de un objeto. 
 
-let capitalCitiesKeys = ;
-let highScoresKeys = ;
-let capitalCitiesValues = ;
-let highScoresValues = ;
+let capitalCitiesKeys = Object.keys(capitalCities);
+let highScoresKeys = Object.keys(highScores);
+let capitalCitiesValues = Object.values(capitalCities);
+let highScoresValues = Object.values(highScores);
 
 // ONLY EDIT ABOVE HERE
 

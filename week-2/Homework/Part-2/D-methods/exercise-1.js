@@ -6,18 +6,25 @@ A person named Alice is defined below.
 
 */
 
-let person = {
+let person = { //Ya estaba en el ejercicio.
     name: "Alice",
     age: 25,
-  };
+    //Agrego las siguientes líneas:
+    greet: function() {
+      return "Hello everybody";
+    },
+    sayName: function() {
+      return 'My name is Alice';
+    },
+};
   
-  /*
-  DO NOT EDIT ANYTHING BELOW THIS LINE
-  */
+/*
+DO NOT EDIT ANYTHING BELOW THIS LINE
+*/
   
-  console.log(
-    `Expected result: Hello everybody. Actual result: ${person.greet()}`
-  );
-  console.log(
-    `Expected result: 'My name is Alice'. Actual result: ${person.sayName()}`
-  );
+console.log(
+  `Expected result: Hello everybody. Actual result: ${person.greet()}`
+);
+console.log(
+  `Expected result: 'My name is Alice'. Actual result: ${person.sayName()}`
+);

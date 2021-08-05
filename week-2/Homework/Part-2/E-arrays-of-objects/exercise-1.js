@@ -27,13 +27,9 @@ WRITE YOUR CODE BELOW
 
 let persons = [person1, person2, person3]; // Complete here -- Definir array de las tres personas
 
-let personNames = function (person) { // Complete here ----------------******************DEBO REVISAR
-    return person.name;
-} 
-persons.map(personNames);
+let personNames = persons.map(person => person.name); // Complete here 
 
-let personsYoungerThan28YearsOld = // Complete here
-
+let personsYoungerThan28YearsOld = persons.filter(person =>person.age < 28); // Complete here
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE

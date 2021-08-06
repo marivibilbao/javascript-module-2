@@ -8,8 +8,8 @@ let person = {
     name: "Alice",
     age: 25,
     currentAddress: "Glasgow",
-    changeAddress: function (newAddress) { //Agrego palabra función ***---- DEBO REVISAR
-        currentAddress = newAddress;
+    changeAddress: function (newAddress) { //Agrego palabra función 
+        this.currentAddress = newAddress; // Agrego "this" al inicio
     },
     celebrateBirthday: function() { //Agrego paréntesis después de la palabra función
         this.age = this.age + 1; //Se cambia el that por this para hacer referencia al objeto actual del método.

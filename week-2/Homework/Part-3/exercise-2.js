@@ -4,11 +4,15 @@ Alice has a list of good friends.
 Define a method "makeFriend" to add a new friend to her list.
 */
 
-let person = {
+let person = { //Codigo ya escrito en el ejercicio
     name: "Alice",
     friends: ["John", "Nina"],
+    //Agrego las siguientes líneas:
+    makeFriend: function (newFriend) {
+      this.friends = this.friends + "," + newFriend;
+    }
   };
-  
+
   /*
   DO NOT EDIT ANYTHING BELOW THIS LINE
   */

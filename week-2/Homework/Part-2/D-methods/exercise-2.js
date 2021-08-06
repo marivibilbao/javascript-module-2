@@ -9,21 +9,9 @@ let person = {
     age: 25,
     currentAddress: "Glasgow",
     changeAddress: function (newAddress) { //Agrego palabra función
-        currentAddress = newAddress;
+        this.currentAddress = newAddress; //Agrego this para hacer referencia al objeto actual.
     },
     celebrateBirthday: function() { //Agrego paréntesis después de la palabra función
         this.age = this.age + 1; //Se cambia el that por this para hacer referencia al objeto actual del método.
     },
 };
-
-//Imprime en consola el valor de la función "celebrateBirthday":
-person.celebrateBirthday();
-console.log(person.age);
-
-//Imprime el valor de la función "changeAddress":
-console.log(person.changeAddress());
-
-/* Debo revisar porque me está imprimiendo lo siguiente:
-        26
-        undefined
-*/

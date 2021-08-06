@@ -15,3 +15,9 @@ let person = {
         this.age = this.age + 1; //Se cambia el that por this para hacer referencia al objeto actual del método.
     },
 };
+
+person.changeAddress("Barcelona");
+console.log(person.currentAddress);
+
+person.celebrateBirthday();
+console.log(person.age);

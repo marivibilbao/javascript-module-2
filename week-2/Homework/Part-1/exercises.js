@@ -15,6 +15,17 @@
  */
  function exerciseOne(arrayOfPeople) { //Ya estaba escrito en el ejercicio.
   let content = document.querySelector("#content"); //Ya estaba escrito en el ejercicio.
+
+  arrayOfPeople.forEach(person => {
+    let titleH1 = document.createElement("h1"); //Creamos elemento h1
+    titleH1.append(person.name); 
+    /* elemento.append() - Añadir o insertar contenido al final del elemento seleccionado.*/
+
+    let titleH2 = document.createElement("h2"); //Creamos elemento h2
+    titleH2.append(person.job);
+
+    content.append(titleH1, titleH2); 
+  });
 }
 
 /* No es lo que solicitan en el ejercicio, ya que las entrandas están más abajo.
@@ -41,8 +52,17 @@ function exerciseOne(arrayOfPeople) { //Ya estaba escrito en el ejercicio.
  *
  */
 
- function exerciseTwo(shopping) { //Ya estaba escrito en el ejercicio.
+function exerciseTwo(shopping) { //Ya estaba escrito en el ejercicio.
   //Write your code in here
+  //const content = document.querySelector("#content");
+  let unorderedList = document.createElement('ul'); //Se crea elemento para lista desordenada
+  content.appendChild(unorderedList); //Lista desordenada está dentro del div content
+
+  shopping.forEach(item => {
+    let list = document.createElement('li'); //Se crea 1er elemento de la lista
+    list.innerHTML = item;
+    unorderedList.appendChild(list);
+  });
 }
 
 /* No es lo que solicitan en el ejercicio, ya que las entrandas están más abajo.
@@ -110,7 +130,6 @@ function exerciseTwo(shopping) { //Ya estaba escrito en el ejercicio.
 function exerciseThree(books) { //Ya estaba escrito en el ejercicio.
   //Write your code in here
   let pBook1 = document.createElement('p');
-  let textBook1 = document.createTextNode();
 }
 
 //

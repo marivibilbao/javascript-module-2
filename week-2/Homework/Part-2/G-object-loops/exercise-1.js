@@ -9,12 +9,19 @@ const studentGrades = { //Ya se encontraba estas líneas.
 };
 
 //Agrego lo siguiente:
+for(const nameGrade in studentGrades){
+  if (studentGrades[nameGrade] > 18){
+    console.log(`${nameGrade.toUpperCase()} - ${studentGrades[nameGrade]}`);
+  }
+};
+
+/*Agrego lo siguiente:
 let values = Object.values(studentGrades); //Declaramos los valores de las propiedades
 let propiedades = Object.keys(studentGrades); //Declaramos las propiedades
 let calificaciones = values.filter(value => value > 18);
 
 console.log(calificaciones);
-/**** REVISAR YA QUE ME DA COMO RESULTADO:
+REVISAR YA QUE ME DA COMO RESULTADO:
 [ 20, 19 ]
 */
 

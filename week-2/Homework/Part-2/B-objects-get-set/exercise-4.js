@@ -8,16 +8,17 @@ var dog = {
 };
 
 // WRITE CODE HERE
-
-var dog = { //Toma el valor de la última variable declarada.
+/*
+let dog = { //Toma el valor de la última variable declarada.
     name: "Rex",
     wantsToPlay: true,
 };
-
-/* Otra forma de hacer el ejercicio. Preguntar en clase!
-dog.name = "Rex",
-dog.wantsToPlay: true,
 */
+
+// Otra forma de hacer el ejercicio. Preguntar en clase!
+dog.name = "Rex";
+dog.wantsToPlay = true;
+
 
 //DO NOT MODIFY BELOW
 console.log(dog.name);

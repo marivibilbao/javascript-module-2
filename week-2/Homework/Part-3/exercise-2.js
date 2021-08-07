@@ -10,6 +10,8 @@ let person = { //Codigo ya escrito en el ejercicio
     //Agrego las siguientes líneas:
     makeFriend: function (newFriend) {
       this.friends = this.friends + "," + newFriend;
+      //Otra forma de hacerlo:
+      //return this.friends.push(newFriend)
     }
   };
 

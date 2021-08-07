@@ -101,3 +101,78 @@ var mentors = [
 
 //YOUR CODE HERE
 
+//Parte 1:
+const mentorsInBcnReact = mentors.filter(mentor => mentor.job.city === "Barcelona" && mentor.skills.includes("React"));
+mentorsInBcnReact.forEach(mentor => console.log(mentor.firstName + " " + mentor.lastName));
+
+//Parte 2:
+mentorsInBcnReact.forEach(mentor => {
+  mentor.class = "Jun1";
+  mentor.skills.push("SQL");
+});
+
+//Parte 3:
+mentors.forEach(mentor => {
+  mentor.addSkills = function(skill){
+    this.skills.push(skill);
+  };
+});
+/* Para hacer la prueba si funciona el código:
+mentors[0].addSkills("clean");
+console.log(mentors[0]);
+*/
+
+//Parte 4:
+function addSkill(mentors,newSkill){
+  mentors.forEach(mentor => {
+    mentor.skills.push(newSkill);
+  });
+};
+
+//Parte 5:
+function removeSkill(mentors,newSkill){
+  mentors.forEach(mentor => {
+    const skillPosition = mentor.skills.findIndex(mentorSkill => mentorSkill === newSkill);
+    if(skillPosition != -1){
+      mentor.skills.splice(skillPosition,1);
+    }
+  });
+};
+/* Para hacer la prueba si funciona el código:
+removeSkill(mentors,"React");
+console.log(mentors[0]);
+*/
+
+//Parte 6:
+function mentorMoreSkill (mentors){
+  let result = 0;
+  let indexMentor = 0;
+  mentors.forEach((mentor,index) => {
+    if (result < mentor.skills.legth){
+      result = mentor.skills.legth;
+      indexMentor = index;
+    };
+  });
+  return mentors[indexMentor];
+};
+/* Para hacer la prueba si funciona el código:
+console.log(mentorMoreSkill(mentors));
+*/
+
+//Parte 7:
+mentors.forEach(mentor => {
+  mentor.addStudentLikes = function(){
+    this.studentLikes++;
+  };
+});
+/*Para hacer la prueba si funciona el código:
+mentors[0].addStudentLikes();
+console.log(mentors[0]);
+*/
+
+//Parte 8:
+function addStudentLikes(mentors){
+  mentors.forEach(mentor => {
+    mentor.studentLikes++;
+  });
+};

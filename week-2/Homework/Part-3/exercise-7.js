@@ -50,17 +50,39 @@ var shoppingCart = {
   selectedProducts: []
 };
 
+//Completar las siguientes funciones:
+//Parte 3:
 function addToShoppingCart(id){
+  products.forEach(product => {
+    if (product.id === id){
+      shoppingCart.selectedProducts.push(product);
+      shoppingCart.totalPrice += product.price;
+    };
+  });
+};
 
-}
-
+//Parte 4:
 function removeFromShoppingCart(id){
+  shoppingCart.selectedProducts.forEach((product,index) => {
+    if (product.id === id){
+      shoppingCart.selectedProducts.splice(index,1);
+      shoppingCart.totalPrice -= product.price;
+    };
+  });
+};
 
-}
-
+//Parte 5:
 function shop(){
-
-}
+  shoppingCart.selectedProducts.forEach(shoppingCartProduct => {
+    products.forEach((product) => {
+      if (product.id === shoppingCartProduct.id){
+        product.stock-= 1;
+      };
+    });
+    shoppingCart.selectedProducts = [];
+    shoppingCart.totalPrice = 0;
+  });
+};
 
 //results
 addToShoppingCart(1);

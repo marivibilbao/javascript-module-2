@@ -14,7 +14,7 @@ let person = { //Ya estaba en el ejercicio.
       return "Hello everybody";
     },
     sayName: function() {
-      return 'My name is Alice';
+      return "My name is" + " " + this.name;
     },
 };
   

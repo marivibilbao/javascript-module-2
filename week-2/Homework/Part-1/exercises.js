@@ -63,7 +63,7 @@ function exerciseTwo(shopping) { //Ya estaba escrito en el ejercicio.
     list.innerHTML = item;
     unorderedList.appendChild(list);
   });
-}
+};
 
 /* No es lo que solicitan en el ejercicio, ya que las entrandas están más abajo.
 function exerciseTwo(shopping) { //Ya estaba escrito en el ejercicio.
@@ -127,10 +127,32 @@ function exerciseTwo(shopping) { //Ya estaba escrito en el ejercicio.
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
 
+
 function exerciseThree(books) { //Ya estaba escrito en el ejercicio.
   //Write your code in here
-  let pBook1 = document.createElement('p');
-}
+  const booklist = document.createElement("ul");
+  
+  books.forEach( book => { 
+    const bookItemLi = document.createElement("li");
+    const bookDetailsP = document.createElement("p");
+    bookDetailsP.textContent = `${book.title} - ${book.author}`;
+
+    const bookImage = document.createElement("img"); //Declaro elemento imagen
+    bookImage.setAttribute("src",book.imageBook);
+    bookImage.style.width = "180px";
+
+    bookItemLi.appendChild(bookDetailsP);
+    bookItemLi.appendChild(bookImage);
+    booklist.appendChild(bookItemLi);
+
+    if (book.alreadyRead) { //Color a la lista de libros
+      bookItemLi.style.backgroundColor = "green";
+    } else {
+      bookItemLi.style.backgroundColor = "red";
+    };
+  });
+  document.body.appendChild(booklist);
+};
 
 //
 //
@@ -158,17 +180,20 @@ const books = [
   {
     title: "The Design of Everyday Things",
     author: "Don Norman",
-    alreadyRead: false
+    alreadyRead: false,
+    imageBook: "https://media.shortform.com/covers/png/the-design-of-everyday-things-cover@8x.png",
   },
   {
     title: "The Most Human Human",
     author: "Brian Christian",
-    alreadyRead: true
+    alreadyRead: true,
+    imageBook: "https://images-na.ssl-images-amazon.com/images/I/41Z56GwEv9L._SX322_BO1,204,203,200_.jpg",
   },
   {
     title: "The Pragmatic Programmer",
     author: "Andrew Hunt",
-    alreadyRead: true
+    alreadyRead: true,
+    imageBook: "https://m.media-amazon.com/images/S/aplus-media/vc/fb71c565-0ec5-44b3-81e1-848bbcccb96f._CR0,5,516,516_PT0_SX300__.jpg",
   }
 ];
 

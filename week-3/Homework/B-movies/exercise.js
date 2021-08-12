@@ -59,9 +59,26 @@ var movies = [
 ];
 
 // create showMovies function
+function showMovies(movies){
+  const divAllMovies = document.querySelector("#all-movies"); //Añadimos id que se encuentra en el HTML
 
+  movies.forEach(movie => {
+    const pMoviesNumber = document.querySelector("#movies-number"); //Añadimos id que se encuentra en el HTML
+
+    pMoviesNumber.textContent = `${movie.title} - ${movie.director}`; //Contenido del elemento párrafo "p"
+
+    divAllMovies.append(pMoviesNumber);
+
+    pMoviesNumber.innerText(movies);
+  });
+};
 
 // create a new movie object for your favorite movie
-
+var myFavoriteMovie = {
+    title: "Padre no hay más que uno",
+    director: "Santiago Segura",
+    type: "Comedia",
+    haveWatched: true,
+};
 
 // create addMovies function

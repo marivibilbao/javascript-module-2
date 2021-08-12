@@ -63,13 +63,14 @@ function showMovies(movies){
   const divAllMovies = document.querySelector("#all-movies"); //Añadimos id que se encuentra en el HTML
   const pMoviesNumber = document.querySelector("#movies-number"); //Añadimos id que se encuentra en el HTML
 
-  movies.forEach(movie => {
+  setTimeout(function(){movies.forEach(movie => { //Método setTimeout llama a una función o evalúa una expresión después de un número específico de milisegundos.
     const pElementFirst = document.createElement("p"); //Creamos elemento "p"
    
-    pElementFirst.textContent = `${movie.title} - ${movie.director}`; //Contenido del elemento párrafo "p"
+    pElementFirst.textContent = ` Title: ${movie.title} - Director: ${movie.director}`; //Contenido del elemento párrafo "p"
 
     divAllMovies.appendChild(pElementFirst);
   });
+  }, 1000);
   pMoviesNumber.innerText= movies.length;
 };
 
@@ -84,3 +85,8 @@ var myFavoriteMovie = {
 };
 
 // create addMovies function
+function addMovies(myFavoriteMovie){
+  movies.push(myFavoriteMovie);
+};
+
+addMovies(myFavoriteMovie);

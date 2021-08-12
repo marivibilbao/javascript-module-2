@@ -61,17 +61,19 @@ var movies = [
 // create showMovies function
 function showMovies(movies){
   const divAllMovies = document.querySelector("#all-movies"); //Añadimos id que se encuentra en el HTML
+  const pMoviesNumber = document.querySelector("#movies-number"); //Añadimos id que se encuentra en el HTML
 
   movies.forEach(movie => {
-    const pMoviesNumber = document.querySelector("#movies-number"); //Añadimos id que se encuentra en el HTML
+    const pElementFirst = document.createElement("p"); //Creamos elemento "p"
+   
+    pElementFirst.textContent = `${movie.title} - ${movie.director}`; //Contenido del elemento párrafo "p"
 
-    pMoviesNumber.textContent = `${movie.title} - ${movie.director}`; //Contenido del elemento párrafo "p"
-
-    divAllMovies.append(pMoviesNumber);
-
-    pMoviesNumber.innerText(movies);
+    divAllMovies.appendChild(pElementFirst);
   });
+  pMoviesNumber.innerText= movies.length;
 };
+
+showMovies(movies);
 
 // create a new movie object for your favorite movie
 var myFavoriteMovie = {

@@ -85,8 +85,8 @@ var myFavoriteMovie = {
 };
 
 // create addMovies function
-function addMovies(myFavoriteMovie){
-  movies.push(myFavoriteMovie);
+function addMovies(movie){
+  movies.push(movie);
 };
 
 addMovies(myFavoriteMovie);

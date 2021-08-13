@@ -30,7 +30,7 @@ function renderizarImagen(){
 
 //Función para siguiente foto
 function forward(){
-    if(posicionActual > dogsImages.length - 1){
+    if(posicionActual >= dogsImages.length - 1){
         posicionActual = 0;
     }else {
         posicionActual ++;

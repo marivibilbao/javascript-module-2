@@ -19,6 +19,7 @@ const autoForwardButton = document.querySelector("#autoForward");
 
 let posicionActual = 0;
 let intervalo;
+//img.setAttribute("src","./images/image1.jpg");
 
 /*
 Función para actualizar la imagen dependiendo de la posición actual
@@ -48,14 +49,11 @@ function back(){
 };
 
 //Agrego evento para botón forward
-forwardButton.addEventListener("click",()=>{
-    forward();
-});
+forwardButton.addEventListener("click",forward);
 
 //Agrego evento para botón back
-backButton.addEventListener("click",()=>{
-    back();
-});
+backButton.addEventListener("click",back);
+
 
 //Agrego evento para botón stop
 stopButton.addEventListener("click",()=>{

@@ -1,1 +1,25 @@
 /** Write your CSS in here **/
+
+body{
+    background-color: #BCBABC;
+}
+
+h1{
+    text-align: center;
+    color: black;
+    font-size: 40px;
+}
+
+imagen {
+    width: 600px;
+    height: 400px;
+    align-items: center;
+}
+
+.buttons_carousel{
+    text-align: center;
+}
+
+.buttons_carousel button{
+    background-color: rgb(238, 168, 238);
+}

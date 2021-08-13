@@ -20,11 +20,12 @@ function setAlarm() { //Creamos función
     }else if(alarmSet>10){
       alarmSet = 10;
       timeRemaining.innerText = "Time Remaining: 00:0" + alarmSet;
+      alarmSet --;
     }else{
       timeRemaining.innerText = "Time Remaining: 00:0" + alarmSet;
       alarmSet --;
     };
-  },1000);
+  },1000); //1seg después de colocar el número
 };
 
 // DO NOT EDIT BELOW HERE

@@ -20,10 +20,12 @@ const autoForwardButton = document.querySelector("#autoForward");
 let posicionActual = 0;
 let intervalo;
 
-//Función para actualizar la imagen dependiendo de la posición actual
+/*
+Función para actualizar la imagen dependiendo de la posición actual
 function renderizarImagen(){
     imagen.style.backgroundImage = `url(${dogsImages[posicionActual]})`;
 };
+*/
 
 //Función para siguiente foto
 function forward(){

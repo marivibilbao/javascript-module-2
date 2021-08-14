@@ -5,9 +5,12 @@ body{
 }
 
 h1{
+    margin-top: 0.5cm;
     text-align: center;
     color: black;
     font-size: 40px;
+    text-shadow: 5px 5px 2px rgb(223, 97, 223);
+    font-weight: 700;
 }
 
 img {
@@ -23,5 +26,18 @@ img {
 }
 
 .buttons_carousel button{
-    background-color: rgb(238, 168, 238);
+    background-color: rgb(223, 97, 223);
+    border-radius: 10px;
+}
+
+#autoBack{
+    background-color: rgb(114, 176, 226);
+}
+
+#autoForward{
+    background-color: rgb(114, 176, 226);
+}
+
+#stop{
+    background-color: rgb(231, 53, 106);
 }

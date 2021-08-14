@@ -32,7 +32,7 @@ let intervalo;
 //Función para actualizar la imagen dependiendo de la posición actual
 function showImagen(index){
     imgSelector.src = dogsImages[index];
-    showPicture(imageIndex);
+    //showPicture(imageIndex);
 };
 
 //Función para siguiente foto

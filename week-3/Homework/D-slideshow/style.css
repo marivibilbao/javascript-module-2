@@ -10,10 +10,12 @@ h1{
     font-size: 40px;
 }
 
-#imagen {
+img {
     width: 600px;
     height: 400px;
     align-items: center;
+    display:block;
+    margin:auto;
 }
 
 .buttons_carousel{

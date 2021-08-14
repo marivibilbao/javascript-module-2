@@ -63,6 +63,18 @@ function showMovies(movies){
   const divAllMovies = document.querySelector("#all-movies"); //Añadimos id que se encuentra en el HTML
   const pMoviesNumber = document.querySelector("#movies-number"); //Añadimos id que se encuentra en el HTML
 
+  document.querySelectorAll(`#all-movies p:not(.alert)`).forEach(paragraph => paragraph.remove()
+  );
+
+  movies.forEach((movie,index) => {
+    const pElementFirst = document.createElement('p');
+    pElementFirst.innerText = `Title: ${movie.title} - Director: ${movie.director}`;
+    setTimeout(() => { divAllMovies.appendChild(pElementFirst) }, 1000*index);
+  });
+
+  pMoviesNumber.innerText = movies.length;
+
+  /*
   setTimeout(function(){movies.forEach(movie => { //Método setTimeout llama a una función o evalúa una expresión después de un número específico de milisegundos.
     const pElementFirst = document.createElement("p"); //Creamos elemento "p"
    
@@ -73,6 +85,10 @@ function showMovies(movies){
   }, 1000);
   pMoviesNumber.innerText= movies.length;
 };
+*/
+};
+
+showMovies(movies);
 
 // create a new movie object for your favorite movie
 var myFavoriteMovie = {
@@ -84,8 +100,31 @@ var myFavoriteMovie = {
 
 // create addMovies function
 function addMovies(movie){
-  setTimeout(movies.push(movie), 2000);
+  setTimeout(() => {
+    movies.push(movie);
+    showMovies(movies);
+  }, 4000);
+  //setTimeout(movies.push(movie), 2000);
 };
 
 addMovies(myFavoriteMovie);
-showMovies(movies);
+
+//Agrego Task 4:
+let submitBtn = document.getElementById('submit');
+
+submitBtn.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  const titleFormulario = document.getElementById('title');
+  const directorFormulario = document.getElementById('director');
+  const typeFormulario = document.getElementById('type');
+  const haveWatchedFormulario = document.getElementById('haveWatched');
+
+  myFavoriteMovie = {
+    title: titleFormulario.value,
+    director: directorFormulario.value,
+    type: typeFormulario.value,
+    haveWatched: haveWatchedFormulario.checked
+  };
+  addMovies(myFavoriteMovie)
+});

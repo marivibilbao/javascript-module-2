@@ -1,3 +1,55 @@
+//Agrego otra forma de hacer el ejercicio:
+let counter = 0;
+
+convertSecondsToMin = (num) => {
+  let min = Math.trunc(num / 60);
+  let sec = num - min * 60;
+  if (min < 10) min = "0" + min;
+  if (sec < 10) sec = "0" + sec;
+  return `${min}:${sec}`;
+};
+
+const writeTime = () => {
+  let timeInMinutes = convertSecondsToMin(counter);
+  const title = document.querySelector("#timeRemaining");
+  title.innerHTML = "Time Remaining: " + timeInMinutes;
+};
+
+const reSetInterval = (interval) =>{
+  if (counter < 0){
+    playAlarm();
+    clearInterval(interval);
+    setTimeout(() => {
+      pauseAlarm();
+    }, 3000);
+  };
+};
+
+function setAlarm(){
+  const userInput = document.querySelector("#alarmSet");
+  counter = +userInput.value;
+  userInput.value = "";
+  let interval = setInterval(() => {
+    writeTime(counter);
+    counter --;
+    if (counter === 0){
+      playAlarm();
+      document.body.style.background = "#BF6BE7"; //Cambia de color el background
+    };
+    reSetInterval(interval);
+  }, 1000);
+};
+
+const stopAlarm = () => {
+  counter = 0;
+};
+
+
+//console.log(+userInput.value);
+//Convertir un string que tiene un número adentro en número
+
+
+/* Como yo lo hice pero tiene algunos detalles:
 let interval;
 
 function setAlarm() { //Creamos función 
@@ -32,6 +84,8 @@ function setAlarm() { //Creamos función
   },1000); //1seg después de colocar el número
 };
 
+*/
+
 // DO NOT EDIT BELOW HERE
 
 var audio = new Audio("alarmsound.mp3");
@@ -42,9 +96,12 @@ function setup() {
   });
 
   document.getElementById("stop").addEventListener("click", () => {
+    stopAlarm();
     pauseAlarm();
+    //clearInterval(interval); //
+    //timeRemaining.innerText = "Time Remaining: 00:00"; //
   });
-}
+};
 
 function playAlarm() {
   audio.play();
@@ -52,6 +109,12 @@ function playAlarm() {
 
 function pauseAlarm() {
   audio.pause();
-}
+  //clearInterval(interval);
+  //let time = timeRemaining.innerText;
+  //time.split("").forEach((caracter,index) => {
+  //  console.log(caracter,index);
+  //});
+  //timeRemaining.innerText = "Time Remaining: 00:00";
+};
 
 window.onload = setup;

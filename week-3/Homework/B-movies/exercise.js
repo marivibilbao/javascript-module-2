@@ -74,8 +74,6 @@ function showMovies(movies){
   pMoviesNumber.innerText= movies.length;
 };
 
-showMovies(movies);
-
 // create a new movie object for your favorite movie
 var myFavoriteMovie = {
     title: "Padre no hay más que uno",
@@ -86,7 +84,8 @@ var myFavoriteMovie = {
 
 // create addMovies function
 function addMovies(movie){
-  movies.push(movie);
+  setTimeout(movies.push(movie), 2000);
 };
 
 addMovies(myFavoriteMovie);
+showMovies(movies);

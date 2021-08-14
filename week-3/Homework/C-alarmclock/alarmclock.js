@@ -17,8 +17,12 @@ function setAlarm() { //Creamos función
       body.style.background = "#BF6BE7"; //Cambia de color el background
       playAlarm(); //Activa sonido
       clearInterval(interval); //Se aplica método para detener el tiempo.
-    }else if(alarmSet>10){
+    }else if(alarmSet > 10){
       alarmSet = 10;
+      timeRemaining.innerText = "Time Remaining: 00:" + alarmSet;
+      alarmSet --;
+    }else if(alarmSet > 9){
+      alarmSet = 9;
       timeRemaining.innerText = "Time Remaining: 00:0" + alarmSet;
       alarmSet --;
     }else{

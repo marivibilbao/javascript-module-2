@@ -6,9 +6,14 @@ let dogImageTwo = "./images/image2.jpg";
 let dogImageThree = "./images/image3.jpg";
 let dogImageFour = "./images/image4.jpg";
 let dogImageFive = "./images/image5.jpg";
+let dogImageSix = "./images/image6.jpg";
+let dogImageSeven = "./images/image7.jpg";
+let dogImageEight = "./images/image8.jpg";
+let dogImageNine = "./images/image9.jpg";
+let dogImageTen = "./images/image10.jpg";
 
 //Array de imágenes
-let dogsImages = [dogImageOne, dogImageTwo, dogImageThree, dogImageFour, dogImageFive];
+let dogsImages = [dogImageOne, dogImageTwo, dogImageThree, dogImageFour, dogImageFive, dogImageSix, dogImageSeven, dogImageEight, dogImageNine, dogImageTen];
 
 const imgSelector = document.querySelector("img");
 
